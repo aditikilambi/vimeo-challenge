@@ -1,0 +1,65 @@
+/* Style for the Imgdiv component */
+
+.Imgdiv {
+	padding-top: 10vh;
+	padding-bottom: 10vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.right > .text {
+	float: right;
+	padding-right: 10vh;
+}
+
+.right > div
+{
+	display: inline-block;
+	vertical-align: middle;
+	max-width: 40%;
+	padding: 0;
+}
+
+.right > .image {	
+	padding-top: 30px;
+	padding-left: 10vh;
+	float: left;
+}
+
+
+.left > .text {
+	float: left;
+	padding-left: 10vh;
+}
+
+.left > div
+{
+	display: inline-block;
+	vertical-align: middle;
+	max-width: 40%;
+	padding: 0;
+}
+
+.left > .image {	
+	padding-top: 30px;
+	padding-right: 10vh;
+	float: right;
+}
+
+.image img {
+	width: 100%;
+}
+
+
+@media screen and (max-width: 400px) {
+
+	.text {
+		width: 80%;
+		display: block;
+		margin: 0px auto;
+	}
+
+
+}
+
