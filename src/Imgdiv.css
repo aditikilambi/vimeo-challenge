@@ -1,65 +1,82 @@
-/* Style for the Imgdiv component */
 
-.Imgdiv {
-	padding-top: 10vh;
-	padding-bottom: 10vh;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-.right > .text {
-	float: right;
-	padding-right: 10vh;
-}
-
-.right > div
-{
-	display: inline-block;
-	vertical-align: middle;
-	max-width: 40%;
+p, h2 {
 	padding: 0;
-}
-
-.right > .image {	
-	padding-top: 30px;
-	padding-left: 10vh;
-	float: left;
+	margin: 0;
 }
 
 
-.left > .text {
-	float: left;
-	padding-left: 10vh;
-}
-
-.left > div
-{
-	display: inline-block;
-	vertical-align: middle;
-	max-width: 40%;
-	padding: 0;
-}
-
-.left > .image {	
-	padding-top: 30px;
-	padding-right: 10vh;
-	float: right;
-}
-
-.image img {
-	width: 100%;
-}
-
-
-@media screen and (max-width: 400px) {
-
-	.text {
-		width: 80%;
-		display: block;
-		margin: 0px auto;
+@media screen and (min-width: 1200px) {
+	.Imgdiv {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: auto;
+		width: 1000px;
+		max-width: 100%;
+		padding-top: 15vh;
+		padding-bottom: 15vh;
+		position: sticky;
 	}
 
 
+	#right > .text {
+		order: 2;
+		float: right;
+	}
+
+	#right > .image {
+		display: inline-block;
+		float: left;	
+		clear: both;		
+		order: 1;
+
+
+	}
+
+	#left > .text {
+		display: block;
+		float: left;
+	}
+
+	#left > .image {
+		display: flex;
+		float: right;
+	}
+
 }
+
+@media screen and (min-width: 600px) {
+	.Imgdiv {
+		align-items: center;
+		justify-content: center;
+		max-width: 90%;
+		margin: auto;
+		padding-top: 15vh;
+		padding-bottom: 15vh;
+	}
+
+	.image {
+		display: block;
+		margin: auto;
+		max-width: 50%;
+	}
+}
+
+@media screen and (max-width: 600px){
+
+	.Imgdiv {
+		margin: 0;
+		padding-top: 15vh;
+		padding-bottom: 15vh;
+	}
+
+	.image {
+		display: block;
+		margin: auto;
+		width: 50%;
+	}
+
+}
+
+
 

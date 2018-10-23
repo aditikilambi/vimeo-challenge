@@ -50,8 +50,6 @@ class App extends Component {
         <Imgdiv info = { this.getInfo(0)} />
         <Imgdiv info = { this.getInfo(1)} />
         <Imgdiv info = { this.getInfo(2)} />
-
-
       </div>
     );
   }
