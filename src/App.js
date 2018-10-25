@@ -3,8 +3,26 @@ import './App.css';
 import Imgdiv from './Imgdiv';
 import Carousel from './Carousel'
 
+/*
+ *  Component: App
+ *  This component contains a render function that returns the entire
+ *  project.
+ *
+ */
 class App extends Component {
   
+
+    /*
+     * Function: Get Info
+     * This function contains an array of information that we intend on storing 
+     *   in Part 1's responsive layout. It returns a single element in the
+     *   array.
+     * @params value: the array index that we wish to return 
+     * @return array[value] The object stored at the array index
+     *
+     *
+     */
+
   getInfo(value){
    var array = [
       {
@@ -41,6 +59,13 @@ class App extends Component {
     return array[value];
   }
   
+  /*
+   *  Render:
+   *  The Imgdiv elements correspond to Part 1's responsive layout.
+   *  The Carousel element creates the carousel outlined in Part 2.
+   *
+   */
+
   render() {
     return (
       <div>

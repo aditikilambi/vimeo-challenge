@@ -1,6 +1,13 @@
 import React, { Component } from 'react';
 import './Slide.css';
 
+/*
+ * 	Component: Slide
+ *	This component creates a simple slide layout to be used in the 
+ * 	Carousel.
+ *
+ */
+
 class Slide extends Component {
 	render(){
 		return (

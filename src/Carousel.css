@@ -1,4 +1,7 @@
 
+/* Responsive Layout */
+
+/* For a larger screen */
 @media screen and (min-width: 850px) {
 
 	.Carousel {
@@ -8,7 +11,7 @@
 		max-width: 100%;
 		margin: 0 auto;
 		position: relative;
-		background: linear-gradient(white, rgb(58,58,58));
+		background-color: rgb(58,58,58);
 	}
 
 	.slide {
@@ -22,10 +25,12 @@
 
 	.rightarrow {
 		padding-right: 10%;
+
 	}
 
 }
 
+/* For a smaller screen */
 @media screen and (max-width: 850px) {
 
 	.Carousel {
@@ -35,7 +40,7 @@
 		max-width: 100%;
 		margin: 0 auto;
 		position: relative;
-		background: linear-gradient(white, rgb(58,58,58));
+		background-color: rgb(58,58,58);
 	}
 
 	.slide {
@@ -44,6 +49,7 @@
 	}
 }
 
+/* Arrow Styles and Nitpicking */
 
 .arrow {
 	top: 50vh;
@@ -54,15 +60,12 @@
 	opacity: 0.5;
 	transition: 0.2s;
 	font-weight: 1px;
+	padding-top: 3%;
 }
-
-
-
 
 .arrow:hover {
 	opacity: 0.5;
 	color: rgb(93,179,233);
-	border: 2px solid rgba(93,179,233, 0.1);
 	transition: 0.2s;
 	cursor: pointer;
 }
@@ -77,20 +80,21 @@
 	font-weight: 1px;
 }
 
-
-.fromLeft-enter {
-	left: -100%;
-}
-
-.fromLeft-enter.fromLeft-enter-active {
-	left: 0;
-	transition: 1000ms;
-}
+/* Transitions */
 
 .fromRight-enter {
-	left: 100%;
+  transform: translate(100vw);
 }
+
 .fromRight-enter.fromRight-enter-active {
-	left: 0;
-	transition: 500ms;
+  transform: translate(0%);
+  transition: transform 500ms ease-in-out;
+}
+
+.fromLeft-enter {
+  transform: translate(0%);
+}
+.fromLeft-enter.fromLeft-enter-active {
+  transform: translate(-100vw);
+  transition: transform 500ms ease-in-out;
 }

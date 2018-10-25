@@ -1,9 +1,22 @@
 import React, { Component } from 'react';
 import Slide from './Slide'
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import './Carousel.css';
 
 
+// import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+
+
+var ReactCSSTransitionGroup = require('react-addons-css-transition-group');
+
+
+/*
+ * Component: Carousel
+ * This component creates a Carousel component to later be used in
+ * App.js .
+ *
+ * The Carousel consists of a looping series of Slide components, which the
+ * user can toggle through.
+ */
 
 
 class Carousel extends Component {
@@ -14,15 +27,27 @@ class Carousel extends Component {
 	    	current: 0,
 	    	right: true
 	    };
+
+	    /* 
+	    * 	In order to be able to use and modify the this.state, we 
+	    * 	need to bind the methods we will be using to "this"
+	    */
 	    this.next = this.next.bind(this);
 	    this.prev = this.prev.bind(this);
 	    this.getRightVal = this.getRightVal.bind(this);
 	}
 
 	/*
-	*	Method: Get Info
-	*	This method takes
-	*	@params	value	
+	*	Function: Get Info
+	*	This function contains an array of information that we intend on storing 
+	*		in the Carousel, and allows the user to retrieve individual 
+	*		elements of the array or the entire array, depending on user need. 
+	*	@params	value: the array index that we wish to return
+	*			isSlide: a boolean value representing if we wish to return the 
+	*				information for one slide.  
+	* 	@return array[value] if ifSlide is true, and we only want one element of
+	*				the array
+	*			array if ifSlide is false, and we want the entire array
 	*
 	*
 	*/
@@ -68,6 +93,14 @@ class Carousel extends Component {
 
 
 
+    /*
+	 * 	Function: next
+	 * 	This function increments the slide value when an arrow is clicked.
+	 *	no @params or @return
+	 *	This function simply modifies the component's state, so that the 
+	 * 	next slide can be viewed
+	 *
+     */
     next() {
     	var increment = (this.state.current + 1) % (this.getInfo(0, false).length);
     	this.setState({
@@ -76,11 +109,17 @@ class Carousel extends Component {
     	});
     }
 
+    /*
+	 * 	Function: prev
+	 * 	This function decrements the slide value when an arrow is clicked.
+	 *	no @params or @return
+	 *	This function simply modifies the component's state, so that the 
+	 * 	previous slide can be viewed.
+	 *
+     */
 
     prev() {
-    	var prevSlide = (this.state.current - 1) 
-    	var totalSlides = (this.getInfo(0, false).length);
-    	var decrement = prevSlide % totalSlides;
+    	var decrement = (this.state.current - 1) % (this.getInfo(0, false).length);
     	if(decrement < 0) {
     		decrement = this.getInfo(0, false).length + decrement;
     	}
@@ -90,6 +129,13 @@ class Carousel extends Component {
     	});
     }
 
+    /*
+     * 	Function: getRightVal
+     * 	This function is intended to retrieve the next animation type, based
+     *	on what value is currently stored in state.
+     *	@return a boolean value representing the next transition type
+     *
+     */
     getRightVal(){
     	return this.state.right;
     }
@@ -102,7 +148,7 @@ class Carousel extends Component {
   		
   		<div class = 'Carousel'>
   				<div class = 'leftarrow'>
-	  				<div class='arrow' onClick={this.prev}><h1>&lArr;</h1></div>
+	  				<div class='arrow' onClick={this.prev}><h1>&lt;</h1></div>
 	  			</div>
 
 
@@ -110,18 +156,21 @@ class Carousel extends Component {
 			  		
 			  		<ReactCSSTransitionGroup
 			        	transitionName={ this.getRightVal ? 'fromRight' : 'fromLeft'}
+			        	transitionEnter={true}
 			          	transitionEnterTimeout={500}
-			          	transitionLeaveTimeout={500}
-			        >    
+			          	transitionLeaveTimeout={500}>    
+						
 						<Slide 
+							key = { this.getInfo(this.state.current, true).title }
 						    title={ this.getInfo(this.state.current, true).title }
 						    image={ this.getInfo(this.state.current, true).image } 
 						    description = { this.getInfo(this.state.current, true).description } />	
+
 				    </ReactCSSTransitionGroup>
 				</div>
 
 		        <div class = 'rightarrow'>
-		        	<div class='arrow' onClick={this.next}><h1>&rArr;</h1></div>
+		        	<div class='arrow' onClick={this.next}><h1>&gt;</h1></div>
 		        </div>
         </div>
     );

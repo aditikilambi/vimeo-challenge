@@ -1,6 +1,13 @@
 import React, { Component } from 'react';
 import './Imgdiv.css';
 
+/*
+ *	Component: Imgdiv
+ *	This component creates a single Image, Title, and Description layout
+ * 	for use in Part 1.
+ *	
+ */
+
 class Imgdiv extends Component {
 	render() {
 
