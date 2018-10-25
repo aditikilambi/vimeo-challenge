@@ -1,0 +1,18 @@
+.slide {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 80%;
+	margin: auto;
+}
+
+.poster > img {
+	height: 250;
+	width: 170px;
+	float: left;
+	padding: 40px;
+}
+
+.blurb {
+	float: right;
+}

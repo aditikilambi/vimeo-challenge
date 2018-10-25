@@ -3,12 +3,19 @@ import './Slide.css';
 
 class Slide extends Component {
 	render(){
-	return (
-	    <div className="slide">
-	      	<img src = { this.props.image } />
-	    </div>
-	);
-}
+		return (
+		    <div className="slide">
+		    	<div class = 'poster'>
+		      		<img src = { this.props.image } />
+		      	</div>
+		      	<div class = 'blurb'>
+		      		<h1> {this.props.title} </h1>
+		      		<p> {this.props.description} </p>
+		      	</div>
+
+		    </div>
+		);
+	}
 }
 
 export default Slide;

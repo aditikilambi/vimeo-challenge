@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Imgdiv from './Imgdiv';
-//import Carousel from './Carousel'
+import Carousel from './Carousel'
 
 class App extends Component {
   
@@ -44,9 +44,10 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Imgdiv info = { this.getInfo(0)} type = 'layout' />
-        <Imgdiv info = { this.getInfo(1)} type = 'layout' />
-        <Imgdiv info = { this.getInfo(2)} type = 'layout' />
+        <Imgdiv info = { this.getInfo(0)} type = 'monsoon' />
+        <Imgdiv info = { this.getInfo(1)} type = 'beams' />
+        <Imgdiv info = { this.getInfo(2)} type = 'move' />
+        <Carousel />
 
       </div>
     );

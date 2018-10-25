@@ -1,42 +1,96 @@
-/* Sliding Animations */
 
-.enterFromLeft-enter {
-	left: -100%;
-}
-.enterFromLeft-enter.enterFromLeft-enter-active {
-	left: 0;
-	transition: 300ms;
+@media screen and (min-width: 850px) {
+
+	.Carousel {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		max-width: 100%;
+		margin: 0 auto;
+		position: relative;
+		background: linear-gradient(white, rgb(58,58,58));
+	}
+
+	.slide {
+		width: 80%;
+		margin: 0 auto;
+	}
+
+	.leftarrow {
+		padding-left: 10%;
+	}
+
+	.rightarrow {
+		padding-right: 10%;
+	}
+
 }
 
-.enterFromRight-enter {
-	left: 100%;
+@media screen and (max-width: 850px) {
+
+	.Carousel {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		max-width: 100%;
+		margin: 0 auto;
+		position: relative;
+		background: linear-gradient(white, rgb(58,58,58));
+	}
+
+	.slide {
+		width: 80%;
+		margin: 0 auto;
+	}
 }
-.enterFromRight-enter.enterFromRight-enter-active {
-	left: 0;
-	transition: 300ms;
-}
+
 
 .arrow {
-	top: 45vh;
-	width: 80px;
-	height: 80px;
-	border-radius: 50% 50%;
-	border: 2px solid rgba(76,172,233, 0.2);
-	color: rgb(76,172,233);
+	top: 50vh;
+	width: 50px;
+	height: 50px;
+	color: rgb(127,124,157);
 	text-align: center;
-	position: fixed;
-	opacity: 0.6;
+	opacity: 0.5;
 	transition: 0.2s;
+	font-weight: 1px;
 }
+
+
+
+
 .arrow:hover {
-	opacity: 0.8;
-	border: 2px solid rgba(76,172,233, 0.6);
-	cursor: pointer;
+	opacity: 0.5;
+	color: rgb(93,179,233);
+	border: 2px solid rgba(93,179,233, 0.1);
 	transition: 0.2s;
+	cursor: pointer;
 }
-.arrow.left {
-	left: 5vw;
+
+.blurb > p {
+	padding-bottom: 60px;
+	color: white;
 }
-.arrow.right {
-	right: 5vw;
+
+.blurb > h1 {
+	color: white;
+	font-weight: 1px;
+}
+
+
+.fromLeft-enter {
+	left: -100%;
+}
+
+.fromLeft-enter.fromLeft-enter-active {
+	left: 0;
+	transition: 1000ms;
+}
+
+.fromRight-enter {
+	left: 100%;
+}
+.fromRight-enter.fromRight-enter-active {
+	left: 0;
+	transition: 500ms;
 }

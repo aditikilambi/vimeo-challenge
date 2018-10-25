@@ -4,6 +4,7 @@ import './Imgdiv.css';
 class Imgdiv extends Component {
 	render() {
 
+		return(
 			<div class = {this.props.type}>
 				<div class = 'Imgdiv' id = {this.props.info.id % 2 === 0 ? 'right' : 'left'  }>
 					<div class = 'text'>
