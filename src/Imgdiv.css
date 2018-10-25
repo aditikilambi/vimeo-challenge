@@ -1,79 +1,75 @@
 
 p, h2 {
-	padding: 0;
+	padding: 10;
 	margin: 0;
 }
 
+#Imgdiv-monsoon {
+	background: purple;
+}
 
-@media screen and (min-width: 1200px) {
+
+
+@media screen and (min-width: 1284px) {
+
 	.Imgdiv {
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		margin: auto;
-		width: 1000px;
-		max-width: 100%;
+		width: 1050px;
 		padding-top: 15vh;
 		padding-bottom: 15vh;
-		position: sticky;
+		position: relative;
 	}
-
 
 	#right > .text {
 		order: 2;
-		float: right;
+		padding-top: 7%;
 	}
 
-	#right > .image {
-		display: inline-block;
-		float: left;	
-		clear: both;		
+	#right > .image  {
 		order: 1;
-
-
-	}
-
-	#left > .text {
-		display: block;
-		float: left;
+		padding-right: 30px;
 	}
 
 	#left > .image {
-		display: flex;
-		float: right;
+		padding-left: 20px;
 	}
-
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 650px) {
 	.Imgdiv {
 		align-items: center;
-		justify-content: center;
+		justify-content: center ;
 		max-width: 90%;
 		margin: auto;
 		padding-top: 15vh;
-		padding-bottom: 15vh;
+		padding-bottom: 15vh;	
 	}
 
-	.image {
-		display: block;
-		margin: auto;
-		max-width: 50%;
+	.image > img{
+	    display: block;
+	    margin: 0 auto;
+	    padding-top: 10vh;
 	}
 }
 
-@media screen and (max-width: 600px){
-
+@media screen and (max-width: 650px){
 	.Imgdiv {
 		margin: 0;
 		padding-top: 15vh;
-		padding-bottom: 15vh;
 	}
 
 	.image {
 		display: block;
 		margin: auto;
-		width: 50%;
+	}
+
+	.image > img{
+	    display: block;
+	    margin: 0 auto;
+	    max-width: 100%;
 	}
 
 }

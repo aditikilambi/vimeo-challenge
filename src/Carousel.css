@@ -1,0 +1,42 @@
+/* Sliding Animations */
+
+.enterFromLeft-enter {
+	left: -100%;
+}
+.enterFromLeft-enter.enterFromLeft-enter-active {
+	left: 0;
+	transition: 300ms;
+}
+
+.enterFromRight-enter {
+	left: 100%;
+}
+.enterFromRight-enter.enterFromRight-enter-active {
+	left: 0;
+	transition: 300ms;
+}
+
+.arrow {
+	top: 45vh;
+	width: 80px;
+	height: 80px;
+	border-radius: 50% 50%;
+	border: 2px solid rgba(76,172,233, 0.2);
+	color: rgb(76,172,233);
+	text-align: center;
+	position: fixed;
+	opacity: 0.6;
+	transition: 0.2s;
+}
+.arrow:hover {
+	opacity: 0.8;
+	border: 2px solid rgba(76,172,233, 0.6);
+	cursor: pointer;
+	transition: 0.2s;
+}
+.arrow.left {
+	left: 5vw;
+}
+.arrow.right {
+	right: 5vw;
+}

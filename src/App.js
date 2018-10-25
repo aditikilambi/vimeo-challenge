@@ -1,13 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
 import Imgdiv from './Imgdiv';
+//import Carousel from './Carousel'
 
 class App extends Component {
   
-  constructor(props){
-      super(props);
-  }
-
   getInfo(value){
    var array = [
       {
@@ -47,9 +44,10 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Imgdiv info = { this.getInfo(0)} />
-        <Imgdiv info = { this.getInfo(1)} />
-        <Imgdiv info = { this.getInfo(2)} />
+        <Imgdiv info = { this.getInfo(0)} type = 'layout' />
+        <Imgdiv info = { this.getInfo(1)} type = 'layout' />
+        <Imgdiv info = { this.getInfo(2)} type = 'layout' />
+
       </div>
     );
   }
