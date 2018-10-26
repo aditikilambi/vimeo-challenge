@@ -1,6 +1,5 @@
 # Vimeo Coding Challenge
-##Responsive Layout + Carousel
-##Vimeo Core/Growth Team
+Responsive Layout + Carousel for Vimeo Core/Growth Team
 
 
 A coding challege based in React completed for the Front-End Internship position.  
