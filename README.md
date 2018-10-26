@@ -1,5 +1,12 @@
-To run project:
+# Vimeo Coding Challenge
+##Responsive Layout + Carousel
+##Vimeo Core/Growth Team
 
-Clone repository
-Cd into directory
-Npm start
+
+A coding challege based in React completed for the Front-End Internship position.  
+
+To run my project:
+
+1. Clone this repository.
+2. Cd into the vimeo_challenge directory and run npm install.
+3. Run npm start, and view the project at localhost:3000. 
